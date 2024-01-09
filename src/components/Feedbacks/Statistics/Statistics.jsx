@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Statistics = ({ good, neutral, bad }) => {
-  const total = good + neutral + bad;
-  const positivePercentage = total ? Math.round((good / total) * 100) : 0;
-
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
   return (
     <div>
-      <h2>Statistics</h2>
       {total ? (
         <ul>
           <li>Good: {good}</li>
@@ -22,4 +24,3 @@ const Statistics = ({ good, neutral, bad }) => {
   );
 };
 
-export { Statistics };
